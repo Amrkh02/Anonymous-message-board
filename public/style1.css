@@ -1,0 +1,100 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+
+body {
+  padding: 20px;
+  position: relative;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  color: #222;
+}
+
+body::before{
+  content: ""; 
+  background-image: url("https://cdn.glitch.com/f7a8fa5e-d452-4de9-93ed-1858611fb88d%2Fccf13391-7d5d-41d9-89ab-28be87cb4f92.image.png?v=1619379995692");  
+  background-repeat: repeat;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+/* layout */
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.site-header {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.site-header h1 {
+  font-size: 28px;
+  margin-top: 8px;
+  margin-bottom: 6px;
+}
+
+.site-header .tagline {
+  color: #555;
+  font-size: 14px;
+}
+
+.api-tests h2 {
+  text-align: left;
+  margin-bottom: 6px;
+}
+
+.card {
+  background: rgba(255,255,255,0.85);
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+}
+
+/* form controls */
+input[type="text"], textarea {
+  width: 100%;
+  max-width: 720px;
+  box-sizing: border-box;
+  height: 38px;
+  margin: 8px 0;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  font-size: 14px;
+}
+
+textarea { height: 90px; resize: vertical; }
+
+.submit {
+  background-color: #701C3E;
+  color: white;
+  font-weight: 600;
+  padding: 10px 18px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 8px;
+}
+
+.submit:hover { opacity: 0.95; }
+
+.quick-links { text-align: center; }
+.btn-link { background:#1e88e5; color:#fff; padding:8px 12px; border-radius:6px; text-decoration:none; }
+
+.guide p { color:#333; line-height:1.5 }
+
+@media (min-width: 720px) {
+  .container { grid-template-columns: 1fr 360px; }
+}
